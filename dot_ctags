@@ -1,0 +1,33 @@
+--langdef=ansible
+--langmap=ansible:.yml
+--regex-ansible=/^\s*- name:(.*)/\1/t,task/
+
+--langdef=asciidoc
+--langmap=asciidoc:.ad.adoc.asciidoc
+--regex-asciidoc=/^=[ \t]+(.*)/# \1/h/
+--regex-asciidoc=/^==[ \t]+(.*)/. \1/h/
+--regex-asciidoc=/^===[ \t]+(.*)/. . \1/h/
+--regex-asciidoc=/^====[ \t]+(.*)/. . . \1/h/
+--regex-asciidoc=/^=====[ \t]+(.*)/. . . . \1/h/
+--regex-asciidoc=/^======[ \t]+(.*)/. . . . \1/h/
+--regex-asciidoc=/^=======[ \t]+(.*)/. . . . \1/h/
+--regex-asciidoc=/\[\[([^]]+)\]\]/\1/a/
+--regex-asciidoc=/^\.([^ \t].+)/\1/t/
+--regex-asciidoc=/image::([^\[]+)/\1/i/
+--regex-asciidoc=/image:([^:][^\[]+)/\1/I/
+--regex-asciidoc=/include::([^\[]+)/\1/n/
+
+--langdef=Jsonnet
+--langmap=Jsonnet:.jsonnet
+--langmap=Jsonnet:.libsonnet
+--regex-jsonnet=/^[ \t]*local ([A-Za-z0-9_]+)/\1/v,variable/
+--regex-jsonnet=/^[ \t]*([A-Za-z0-9_]+):::?/\1/m,member/
+--regex-jsonnet=/^[ \t]*([A-Za-z0-9_]+)\([^)]*\):::?/\1/f,function/
+
+--regex-make=/^([^# \t:]*):/\1/t,target/
+
+--langmap=yaml:.yml.yaml
+--kinddef-yaml=s,section,sections
+--kinddef-yaml=e,entry,entries
+--regex-yaml=/^([a-zA-Z0-9_\/-]+):/\1/s/{scope=set}
+--regex-yaml=/^ *- (name: .*)$/\1/e/{scope=ref}

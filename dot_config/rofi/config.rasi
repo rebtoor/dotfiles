@@ -1,0 +1,11 @@
+configuration {
+	font: "monospace 12";
+	modes: "drun,run,window,ssh";
+	show-icons: true;
+	sort: true;
+	dpi: 192;
+	window-thumbnail: true;
+	drun-use-desktop-cache: true;
+	drun-reload-desktop-cache: true;
+}
+@theme "config1.rasi"

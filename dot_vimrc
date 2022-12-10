@@ -1,0 +1,141 @@
+let data_dir = '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-obsession'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-sleuth'
+  Plug 'Konfekt/FastFold'
+  Plug 'mhinz/vim-signify'
+  Plug 'junegunn/limelight.vim'
+  Plug 'junegunn/goyo.vim'
+  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+  Plug 'vim-scripts/AutoComplPop'
+  Plug 'dhruvasagar/vim-zoom'
+  Plug 'tmux-plugins/vim-tmux-focus-events'
+  Plug 'lambdalisue/fern.vim'
+  Plug 'lambdalisue/fern-mapping-mark-children.vim'
+  Plug 'tpope/vim-eunuch'
+  Plug 'will133/vim-dirdiff'
+  Plug 'machakann/vim-highlightedyank'
+  Plug 'unblevable/quick-scope'
+  Plug 'nelstrom/vim-visual-star-search'
+  Plug 'haya14busa/is.vim'
+  Plug 'mhinz/vim-grepper'
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'AndrewRadev/linediff.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'itchyny/lightline.vim'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'majutsushi/tagbar'
+  Plug 'dense-analysis/ale'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'yggdroot/indentline'
+  Plug 'chrisbra/csv.vim'
+  Plug 'ekalinin/dockerfile.vim'
+  Plug 'Glench/Vim-Jinja2-Syntax'
+  Plug 'fatih/vim-go'
+  Plug 'cespare/vim-toml', { 'branch': 'main' }
+  Plug 'godlygeek/tabular' | Plug 'tpope/vim-markdown'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+  Plug 'jvirtanen/vim-hcl'
+  Plug 'lifepillar/pgsql.vim'
+  Plug 'PotatoesMaster/i3-vim-syntax'
+  Plug 'stephpy/vim-yaml'
+  Plug 'tmux-plugins/vim-tmux'
+  Plug 'tpope/vim-git'
+  Plug 'tpope/vim-rails'
+  Plug 'vim-python/python-syntax'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'wgwoods/vim-systemd-syntax'
+  Plug 'towolf/vim-helm'
+  Plug 'hashivim/vim-terraform'
+call plug#end()
+
+execute "source " expand(data_dir).'/'.'syntastic.vim'
+execute "source " expand(data_dir).'/'.'lightline.vim'
+execute "source " expand(data_dir).'/'.'nerdcommenter.vim'
+execute "source " expand(data_dir).'/'.'tagbar.vim'
+execute "source " expand(data_dir).'/'.'mapping.vim'
+execute "source " expand(data_dir).'/'.'autocommands.vim'
+execute "source " expand(data_dir).'/'.'fzf.vim'
+execute "source " expand(data_dir).'/'.'fern.vim'
+execute "source " expand(data_dir).'/'.'quickscope.vim'
+execute "source " expand(data_dir).'/'.'vim-grepper.vim'
+execute "source " expand(data_dir).'/'.'fastfold.vim'
+execute "source " expand(data_dir).'/'.'limelight.vim'
+execute "source " expand(data_dir).'/'.'ultisnips.vim'
+
+if !has('gui_running')
+	  set t_Co=256
+endif
+
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+syntax enable
+colorscheme dracula
+
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set backupdir=/tmp//,.
+set clipboard=unnamedplus,unnamed
+set colorcolumn=80
+set complete+=kspell
+set completeopt=menuone,longest
+set cursorline
+set directory=/tmp//,.
+set encoding=utf-8
+set expandtab smarttab
+set formatoptions=tcqrn1
+set hidden
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set matchpairs+=<:> " Use % to jump between pairs
+set mmp=5000
+set modelines=2
+set mouse=a
+set nocompatible
+set noerrorbells visualbell t_vb=
+set noshiftround
+set nospell
+set nostartofline
+set number relativenumber
+set regexpengine=1
+set ruler
+set scrolloff=0
+set shiftwidth=2
+set showcmd
+set showmatch
+set shortmess+=c
+set showmode
+set smartcase
+set softtabstop=2
+set spelllang=en_us
+set splitbelow
+set splitright
+set tabstop=2
+set textwidth=0
+set ttimeout
+set timeoutlen=1000
+set ttimeoutlen=0
+set ttyfast
+set ttymouse=sgr
+set undodir=/tmp
+set undofile
+set virtualedit=block
+set whichwrap=b,s,<,>
+set wildmenu
+set wildmode=full
+set wrap

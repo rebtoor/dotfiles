@@ -1,0 +1,3 @@
+FZF_BASH="${HOME}/.fzf.bash"
+[[ -e ${FZF_BASH} ]]; source ${FZF_BASH} 
+
