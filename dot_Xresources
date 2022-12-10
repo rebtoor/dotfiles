@@ -1,4 +1,4 @@
-Xft.dpi: 192
+Xft.dpi: 96
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintslight
@@ -17,7 +17,7 @@ URxvt*saveLines: 5000
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
-rofi.dpi: 192
+rofi.dpi: 96
 *.foreground: #F8F8F2
 *.background: #282A36
 *.color0:     #000000

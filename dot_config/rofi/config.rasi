@@ -3,7 +3,7 @@ configuration {
 	modes: "drun,run,window,ssh";
 	show-icons: true;
 	sort: true;
-	dpi: 192;
+	dpi: 96;
 	window-thumbnail: true;
 	drun-use-desktop-cache: true;
 	drun-reload-desktop-cache: true;

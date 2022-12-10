@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
-[user]
-	name = Roberto Alfieri
-	email = me@rebtoor.com
-	signingkey = 2D7661DEAADE96EA
+[includeIf "gitdir:~/Sources/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/Work/"]
+  path = ~/.gitconfig-work
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
