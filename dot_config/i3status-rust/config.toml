@@ -35,11 +35,6 @@ chip = "*-isa-*"
 block = "sound"
 
 [[block]]
-block = "time"
-interval = 5
-format = "%a %d/%m %R"
-
-[[block]]
 block = "dnf"
 interval = 3600
 critical_updates_regex = "(linux|linux-lts|linux-zen)"
@@ -51,3 +46,10 @@ block = "xrandr"
 [[block]]
 block = "battery"
 if_command = "test -e /sys/class/power_supply/BAT0"
+
+[[block]]
+block = "time"
+interval = 5
+format = "%a %d/%m %R"
+
+

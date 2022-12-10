@@ -1,5 +1,5 @@
 configuration {
-	font: "monospace 12";
+	font: "PragmataPro Mono Liga Regular 14";
 	modes: "drun,run,window,ssh";
 	show-icons: true;
 	sort: true;
