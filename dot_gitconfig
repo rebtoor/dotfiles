@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-#	name = Roberto Alfieri
-#	email = rebtoor@x1-carbon.(none)
+	name = Roberto Alfieri
+	email = me@rebtoor.com
+	signingkey = 2D7661DEAADE96EA
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
@@ -22,3 +22,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[commit]
+	gpgsign = true
