@@ -1,0 +1,5 @@
+function compressPdf() {
+  inputFile="${1}"
+  outputFile="${HOME}/Documents/PDF/$(basename ${1})"
+  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=${outputFile} ${inputFile}
+}

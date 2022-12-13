@@ -1,0 +1,7 @@
+RESTIC_ENV_FILE=${HOME}/.restic.env
+
+if [ -f ${RESTIC_ENV_FILE} ]; then
+    while read line; do
+        export ${line};
+    done < ${RESTIC_ENV_FILE}
+fi
