@@ -7,7 +7,7 @@ set bell-style none
 set editing-mode vi
 
 #show mode in prompt
-set show-mode-in-prompt on
+set show-mode-in-prompt off
 
 # Perform file completion in a case insensitive fashion
 set completion-ignore-case on
@@ -46,3 +46,5 @@ TAB: menu-complete
 # shift tab cycles backward
 "\e[Z": menu-complete-backward
 
+# clear screen pls
+"\C-l": clear-screen
