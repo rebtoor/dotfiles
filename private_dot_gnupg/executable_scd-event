@@ -1,0 +1,6 @@
+#!/bin/sh
+state=$8
+
+if [ "$state" = "NOCARD" ]; then
+  gpgconf -K scdaemon
+fi
