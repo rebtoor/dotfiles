@@ -226,6 +226,7 @@ bar {
   status_command i3status-rs
   position top
   font pango: PragmataPro Mono Liga 14
+  tray_output DisplayPort-0
   colors {
     background #282A36
     statusline #F8F8F2
