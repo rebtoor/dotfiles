@@ -12,6 +12,7 @@ call plug#begin()
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-sleuth'
   Plug 'Konfekt/FastFold'
+  Plug 'tmhedberg/SimpylFold'
   Plug 'mhinz/vim-signify'
   Plug 'junegunn/limelight.vim'
   Plug 'junegunn/goyo.vim'
@@ -31,12 +32,16 @@ call plug#begin()
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'AndrewRadev/linediff.vim'
   Plug 'scrooloose/nerdtree'
+  Plug 'jistr/vim-nerdtree-tabs'
   Plug 'airblade/vim-gitgutter'
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'majutsushi/tagbar'
   Plug 'dense-analysis/ale'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'yggdroot/indentline'
   Plug 'chrisbra/csv.vim'
@@ -54,6 +59,8 @@ call plug#begin()
   Plug 'tpope/vim-git'
   Plug 'tpope/vim-rails'
   Plug 'vim-python/python-syntax'
+  Plug 'vim-scripts/indentpython.vim'
+  Plug 'nvie/vim-flake8'
   Plug 'vim-ruby/vim-ruby'
   Plug 'wgwoods/vim-systemd-syntax'
   Plug 'towolf/vim-helm'
@@ -73,6 +80,8 @@ execute "source " expand(data_dir).'/'.'vim-grepper.vim'
 execute "source " expand(data_dir).'/'.'fastfold.vim'
 execute "source " expand(data_dir).'/'.'limelight.vim'
 execute "source " expand(data_dir).'/'.'ultisnips.vim'
+execute "source " expand(data_dir).'/'.'ale.vim'
+execute "source " expand(data_dir).'/'.'deoplete.vim'
 
 if !has('gui_running')
 	  set t_Co=256
