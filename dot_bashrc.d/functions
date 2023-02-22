@@ -5,7 +5,8 @@ function compressPdf() {
 }
 
 function upgrade_crc() {
-  crcVersion="${1}"
   localPath=${2:-~/.local/bin}
-  curl -sL https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/${crcVersion}/crc-linux-amd64.tar.xz |tar --strip-components=1 -C ${localPath} -xvJ --no-anchored crc
+  crcVersion="${1:-latest}"
+  crcUrl=https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/${crcVersion}/crc-linux-amd64.tar.xz
+  curl -sL ${crcUrl} |tar --strip-components=1 -C ${localPath} -xvJ --no-anchored crc
 }
