@@ -3,3 +3,9 @@ function compressPdf() {
   outputFile="${HOME}/Documents/PDF/$(basename ${1})"
   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=${outputFile} ${inputFile}
 }
+
+function upgrade_crc() {
+  crcVersion="${1}"
+  localPath=${2:-~/.local/bin}
+  curl -sL https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/${crcVersion}/crc-linux-amd64.tar.xz |tar --strip-components=1 -C ${localPath} -xvJ --no-anchored crc
+}
