@@ -65,6 +65,7 @@ call plug#begin()
   Plug 'wgwoods/vim-systemd-syntax'
   Plug 'towolf/vim-helm'
   Plug 'hashivim/vim-terraform'
+  Plug 'raimon49/requirements.txt.vim'
 call plug#end()
 
 execute "source " expand(data_dir).'/'.'syntastic.vim'
