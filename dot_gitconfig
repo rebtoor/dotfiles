@@ -30,4 +30,4 @@
 [commit]
   gpgsign = true
 [format]
-  signoff = true
+  signOff = true
