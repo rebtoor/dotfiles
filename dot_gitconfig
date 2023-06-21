@@ -2,7 +2,7 @@
 [user]
   name = Roberto Alfieri
   email = me@rebtoor.com
-  signingkey = 2D7661DEAADE96EA
+  signingkey = 0x0DCCB12450BEA7A0!
 [includeIf "gitdir:~/Sources/"]
   path = ~/.gitconfig-personal
 [includeIf "gitdir:~/Work/"]
@@ -31,3 +31,12 @@
   gpgsign = true
 [format]
   signOff = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	templateDir = /home/rebtoor/.git-template
+[rh-pre-commit]
+	checkSecrets = true
