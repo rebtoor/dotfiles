@@ -9,7 +9,7 @@
   path = ~/.gitconfig-work
 [core]
   pager = diff-so-fancy | less --tabs=4 -RFX
-  editor = 'vi' -c 'startinsert'
+  editor = 'nvim' -c 'startinsert'
 [interactive]
   diffFilter = diff-so-fancy --patch
 [color]
