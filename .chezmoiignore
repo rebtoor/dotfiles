@@ -1,4 +1,4 @@
 dot_bashrc.d/sensible
-{{- if .chezmoi.os "darwin" }}
+{{- if eq .chezmoi.os "darwin" }}
 .Xresources
 {{- end }}
