@@ -37,6 +37,6 @@
 	process = git-lfs filter-process
 	required = true
 [init]
-	templateDir = /home/rebtoor/.git-template
+	templateDir = ~/.git-template
 [rh-pre-commit]
 	checkSecrets = true
