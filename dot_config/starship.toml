@@ -160,6 +160,7 @@ format = '\[[$symbol]($style)\]'
 [os.symbols]
 Gentoo = "󰣨"
 Fedora = ""
+Macos = "󰀵"
 RedHatEnterprise = "󱄛"
 
 [package]
