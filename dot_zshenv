@@ -27,10 +27,10 @@ export CLIPBOARD_THEME="light"
 # pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PYENV_ROOT="$HOME/.pyenv"
-path+=('${PYENV_ROOT}/bin')
+path+=(${PYENV_ROOT}/bin)
 
 # rvm
-path+=('${HOME}/.rvm/bin')
+path+=(${HOME}/.rvm/bin)
 
 # export PATH
 export PATH
