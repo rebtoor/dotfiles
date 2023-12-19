@@ -1,9 +1,9 @@
 ttyname $GPG_TTY
 default-cache-ttl 3600
 max-cache-ttl 3600
-{{ if eq .chezmoi.os "darwin" }}
+{{ if eq .chezmoi.os "darwin" -}}
 pinentry-program /opt/homebrew/bin/pinentry-mac
-{{ else if eq .chezmoi.os "linux" }}
-pinentry-program /usr/bin/pinentry
-{{ end }}
+{{ else if eq .chezmoi.os "linux" -}}
+pinentry-program /usr/bin/pinentry-gnome3
+{{ end -}}
 enable-extended-key-format
