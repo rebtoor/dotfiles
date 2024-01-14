@@ -1,6 +1,0 @@
-if [ -e /etc/redhat-release ]; then
-  source /usr/share/fzf/shell/key-bindings.bash
-else
-  source /usr/share/bash-completion/completions/fzf
-  source /usr/share/fzf/key-bindings.bash
-fi
