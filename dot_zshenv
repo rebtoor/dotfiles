@@ -24,16 +24,5 @@ export MANROFFOPT="-c"
 # clipboard
 export CLIPBOARD_THEME="light"
 
-# pyenv
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PYENV_ROOT="${HOME}/.pyenv"
-path+=(${PYENV_ROOT}/bin)
-
-# rvm
-path+=(${HOME}/.rvm/bin)
-
-# nvm
-export NVM_DIR="${HOME}/.nvm"
-
 # export PATH
 export PATH
