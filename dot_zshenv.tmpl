@@ -26,3 +26,8 @@ export CLIPBOARD_THEME="light"
 
 # export PATH
 export PATH
+
+{{ if eq .chezmoi.os "linux" }}
+# export RESTIC_REPOSITORY
+export RESTIC_REPOSITORY=/restic/
+{{ end }}
