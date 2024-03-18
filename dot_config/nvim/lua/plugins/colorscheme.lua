@@ -1,7 +1,7 @@
 return {
-	{
-		"catppuccin/nvim",
-		lazy = true,
-		name = "catppuccin-latte",
-	},
+  {
+    "catppuccin/nvim",
+    lazy = true,
+    name = "catppuccin-mocha",
+  },
 }
